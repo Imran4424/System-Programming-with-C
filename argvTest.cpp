@@ -1,3 +1,9 @@
+/*
+In this program we are trying to pass arguments through command line
+
+*/
+
+
 #include <stdio.h>
 
 
