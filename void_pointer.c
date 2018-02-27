@@ -1,3 +1,9 @@
+/*
+	implementing basic concept of void pointer
+
+*/
+
+
 #include <stdio.h>
 
 void add(void *x,void *y)
