@@ -1,4 +1,12 @@
-#include <stdio.h>
+/*
+	here we implement two basic system calls 
+
+	"perror" and "open"
+
+*/
+
+
+#include <stdio.h>          //for perror
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
