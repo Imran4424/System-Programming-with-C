@@ -1,3 +1,10 @@
+/*
+	parent child process implementation
+
+	Here one parent has 5 childs
+
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/wait.h>
