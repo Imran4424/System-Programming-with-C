@@ -1,7 +1,22 @@
 /*
-	parent child process implementation
+	Here we implement a code to create child proecess
 
-	Here one parent has 5 childs
+	here we create 5 child process from a single parent
+
+	here "fork()" function is called to create the child process
+
+	after calling fork(),
+
+						it will return the child proceess id to the parent process
+
+						it will return 0 to the child process
+
+	we use "getpid()" function to achieve current process id, for both parent and child process
+
+
+	we use one more function for child process
+	that is "getppid()"
+	to achieve parent process id for this child
 
 */
 
@@ -27,7 +42,7 @@ int main()
 	}
 	else if(childPID == 0 )
 	{
-		printf("#######I am child One - %d,My parent is  %d \n\n", childPID, myPID);
+		printf("#######I am child One - %d,My parent is  %d \n\n",myPID,getppid());
 	}
 	else
 	{
