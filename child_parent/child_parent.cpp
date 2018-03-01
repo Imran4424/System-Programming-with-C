@@ -21,7 +21,7 @@
 */
 
 #include<stdio.h>
-#include<unistd.h>
+#include<unistd.h>      // For getpid(), getppid(), fork()
 #include<sys/wait.h>
 #include <iostream>
 using namespace std;
@@ -57,7 +57,7 @@ int main()
 		}
 		else if(childPID2 == 0 )
 		{
-			printf("#######I am child two - %d,My parent is  %d \n\n", childPID2, myPID);
+			printf("#######I am child two - %d,My parent is  %d \n\n", myPID,getppid());
 		}
 		else
 		{
@@ -73,7 +73,7 @@ int main()
 			}
 			else if(childPID3 == 0 )
 			{
-				printf("#######I am child three- %d,My parent is  %d \n\n", childPID3, myPID);
+				printf("#######I am child three- %d,My parent is  %d \n\n",myPID,getppid());
 			}
 			else
 			{
@@ -90,7 +90,7 @@ int main()
 				}
 				else if(childPID4 == 0 )
 				{
-					printf("#######I am child four- %d,My parent is  %d \n\n", childPID4, myPID);
+					printf("#######I am child four- %d,My parent is  %d \n\n", myPID, getppid());
 				}
 				else
 				{
@@ -106,7 +106,7 @@ int main()
 					}
 					else if(childPID5 == 0 )
 					{
-						printf("#######I am child five- %d,My parent is  %d \n\n", childPID5, myPID);
+						printf("#######I am child five- %d,My parent is  %d \n\n", myPID,getppid());
 					}
 					else
 					{
@@ -145,10 +145,7 @@ int main()
 	}
 
 
-	while(1)
-	{
-		cout<<"loop"<<endl;
-	}	
+	while(1); //infinity loop to hold the program to view pstree -p
 
 	return 0;
 }
