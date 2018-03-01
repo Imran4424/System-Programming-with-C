@@ -113,33 +113,33 @@ int main()
 
 
 				
-						printf("\nI am parent of child %d, My PID is %d .\n\n", childPID5, getpid());
+						printf("\nI am parent of child %d, My PID is %d .\n\n", childPID5, getppid());
 						wait(NULL);
 						printf("My child is really dead. %d\n\n",childPID5);
 					}
 
 
 				
-					printf("\nI am parent of child %d, My PID is %d .\n\n", childPID4, getpid());
+					printf("\nI am parent of child %d, My PID is %d .\n\n", childPID4, getppid());
 					wait(NULL);
 					printf("My child is really dead. %d\n\n",childPID4);
 				}
 
 				
-				printf("\nI am parent of child %d, My PID is %d .\n\n", childPID3, getpid());
+				printf("\nI am parent of child %d, My PID is %d .\n\n", childPID3, getppid());
 				wait(NULL);
 				printf("My child is really dead. %d\n\n",childPID3);
 			}
 
 
 
-			printf("\nI am parent of child %d, My PID is %d .\n\n", childPID2, getpid());
+			printf("\nI am parent of child %d, My PID is %d .\n\n", childPID2, getppid());
 			wait(NULL);
 			printf("My child is really dead. %d\n\n",childPID2);
 		}
 
 
-		printf("\nI am parent of child %d, My PID is %d .\n\n", childPID, getpid());
+		printf("\nI am parent of child %d, My PID is %d .\n\n", childPID, getppid());
 		wait(NULL);
 		printf("My child is really dead. %d\n\n",childPID);
 	}
