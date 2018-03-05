@@ -113,7 +113,7 @@ int main()
 
 
 				
-						printf("\nI am parent of child %d, My PID is %d .\n\n", childPID5, getppid());
+						printf("\nI am parent of child %d, My PID is %d .\n\n", childPID5, getpid());
 						wait(NULL);
 						printf("My child is really dead. %d\n\n",childPID5);
 					}
