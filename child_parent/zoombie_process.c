@@ -1,4 +1,4 @@
-this code demostrate the zoombie process
+/*this code demostrate the zoombie process
 
 zoombie process is a child process
 
@@ -10,7 +10,7 @@ In termial,
 
 	To run:      ./zoombie_process
 
-
+*/
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
