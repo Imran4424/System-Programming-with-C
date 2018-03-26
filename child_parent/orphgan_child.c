@@ -1,3 +1,9 @@
+This is a code to demonstrate Orphan child state
+
+
+Orphan child is a 
+
+
 #include <stdio.h>
 #include <unistd.h>
 
