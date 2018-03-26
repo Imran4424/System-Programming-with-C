@@ -1,7 +1,11 @@
 This is a code to demonstrate Orphan child state
 
 
-Orphan child is a 
+Orphan child is a child process running
+					whose parent is dead.
+
+
+to compile this code on linux, in terminal
 
 
 #include <stdio.h>
