@@ -17,21 +17,7 @@ void child_one()
 	char msg[MSG_SZ];	
 
 	for (i = 1; i <= N; i++) {
-		/*
-			** The following instructions can be simply written as:
-			-------------------------------------------------------
-			printf("%d. I am Thread-1. My task is to increase a. Before (a = a + 1): %d\n", i, a);	
-			a = a + 1;
-			printf("%d. I am Thread-1. My task is to increase a. After (a = a + 1): %d\n", i, a);
-			-------------------------------------------------------
-			
-			** Check if there is any change, if we write:
-			-------------------------------------------------------
-			printf("%d. I am Thread-1. My task is to increase a. Before (a++): %d\n", i, a);	
-			a++;
-			printf("%d. I am Thread-1. My task is to increase a. After (a++): %d\n", i, a);
-			-------------------------------------------------------
-		*/
+		
 		sprintf(msg, "%d. I am Child One. My task is to increase a. Before (a = a + 1): %d\n", i, a);	
 		write(1, msg, strlen(msg) + 1);
 		a = a + 1;
