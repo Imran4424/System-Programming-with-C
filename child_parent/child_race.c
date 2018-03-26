@@ -1,3 +1,16 @@
+in this code we will understand the nature of
+
+		multiple child process
+
+		they are : child processes run independently
+
+				   child process run concurrently
+
+		this is described by creating a child race between two child process
+
+
+
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
