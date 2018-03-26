@@ -1,3 +1,14 @@
+this code demostrate the zoombie process
+
+zoombie process is a child process
+
+	which is dead but it's information is still in system
+
+In termial,
+
+	To compile:  
+
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
