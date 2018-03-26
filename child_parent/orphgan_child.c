@@ -1,4 +1,4 @@
-This is a code to demonstrate Orphan child state
+/*This is a code to demonstrate Orphan child state
 
 
 Orphan child is a child process running
@@ -7,6 +7,13 @@ Orphan child is a child process running
 
 to compile this code on linux, in terminal
 
+	gcc orphan_child.c -o orphan_child
+
+to run just type
+
+		./orphan_child
+
+*/
 
 #include <stdio.h>
 #include <unistd.h>
