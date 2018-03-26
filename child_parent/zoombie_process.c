@@ -6,7 +6,7 @@ zoombie process is a child process
 
 In termial,
 
-	To compile:  
+	To compile:  gcc zoombie_process.c -o zoombie_process
 
 
 #include <stdio.h>
