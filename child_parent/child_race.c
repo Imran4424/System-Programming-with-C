@@ -6,7 +6,7 @@ in this code we will understand the nature of
 
 				   child process run concurrently
 
-		this is described by creating a child race between two child process
+		this is described by creating a child race between two child processes
 
 
 
