@@ -1,4 +1,4 @@
-in this code we will understand the nature of
+/*in this code we will understand the nature of
 
 		multiple child process
 
@@ -13,7 +13,7 @@ in terminal,
 	to compile: gcc child_race.c -o child_race
 	to run:     ./child_race
 
-
+*/
 
 
 #include <stdio.h>
