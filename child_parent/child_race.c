@@ -8,6 +8,11 @@ in this code we will understand the nature of
 
 		this is described by creating a child race between two child processes
 
+in terminal,
+
+	to compile: gcc child_race.c -o child_race
+	to run:     ./child_race
+
 
 
 
