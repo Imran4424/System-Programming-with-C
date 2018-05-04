@@ -46,7 +46,7 @@ int main() {
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(12000);  // here 12000 is a port number
-    server_address.sin_addr.s_addr = INADDR_ANY; // to connect 
+    server_address.sin_addr.s_addr = INADDR_ANY; // to connect any client
 
     // Bind the above socket to the specified IP and port
     int addr_len;
