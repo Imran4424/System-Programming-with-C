@@ -78,7 +78,7 @@ int main() {
 
 	//just create a infinity loop
 
-	while(1)
+	while(good_bye_count != 2)
 	{
 		printf("waiting\n");
 
