@@ -1,4 +1,7 @@
-/*this code demostrate the zoombie process
+/*
+======================================================================
+
+this code demostrate the zoombie process
 
 zoombie process is a child process
 
