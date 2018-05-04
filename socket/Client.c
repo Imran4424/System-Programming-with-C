@@ -89,6 +89,11 @@ int main() {
             printf("received is failed\n");
         }
 
+        if(strcmp(server_response,"good bye") == 0 || strcmp(server_message,"Good Bye") == 0 || strcmp(server_message,"Good bye") == 0)
+        {
+            good_bye_count++;
+        }
+
         // 3.2. Check sever's response.
         printf("server: %s\n", server_response);
 
