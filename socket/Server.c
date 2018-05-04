@@ -24,7 +24,10 @@
    ----------------------------------------------------------------------
     A special message:
 
-    "good bye" or "G"
+    "good bye" or "Good bye" or "Good Bye"
+
+    any of these three messages from,
+                            either sender's end
 
    ----------------------------------------------------------------------
     SHAH MD. IMRAN HOSSAIN
