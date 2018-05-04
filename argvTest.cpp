@@ -1,6 +1,10 @@
 /*
 In this program we are trying to pass arguments through command line
-
+-------------------------------------------------------------------------
+    SHAH MD. IMRAN HOSSAIN
+    Dept. of CSE, University of Rajshahi,
+    Rajshahi-6205, Bangladesh
+   ----------------------------------------------------------------------
 */
 
 
