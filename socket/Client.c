@@ -110,7 +110,7 @@ int main() {
             perror("sending failed");
         }
 
-        if(strcmp(client_message,"good bye") == 0 || strcmp(client_message,"Good Bye") == 0 || strcmp(server_message,"Good bye") == 0)
+        if(strcmp(client_message,"good bye") == 0 || strcmp(client_message,"Good Bye") == 0 || strcmp(client_message,"Good bye") == 0)
         {
             good_bye_count++;
         }
