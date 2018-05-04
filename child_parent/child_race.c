@@ -17,7 +17,7 @@ in terminal,
 	to run:     ./child_race
 
 ---------------------------------------------------------
-Necessary System calls:
+Necessary System calls/library functions:
 						fork()
 						getpid()
 						write()
