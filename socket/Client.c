@@ -80,32 +80,32 @@ int main() {
 	while(1)
 	{
 		
-            printf("server waiting for your response\n");
+        printf("server waiting for your response\n");
 
-            scanf ("%[^\n]%*c", client_message);
+        scanf ("%[^\n]%*c", client_message);
 
-			//scanf("%[^\n]s",client_message);
-			
-            int sending = send(client_socket,&client_message,sizeof(client_message),0);
+		//scanf("%[^\n]s",client_message);
+		
+        int sending = send(client_socket,&client_message,sizeof(client_message),0);
 
-            if(sending < 0)
-            {
-                perror("sending failed");
-            }
+        if(sending < 0)
+        {
+            perror("sending failed");
+        }
 
-    
-            
-            int receiving = recv(client_socket, &server_response, sizeof(server_response), 0);
 
-            if(receiving < 0)
-            {
-                printf("received is failed\n");
-            }
+        
+        int receiving = recv(client_socket, &server_response, sizeof(server_response), 0);
 
-            // 3.2. Check sever's response.
-            printf("server: %s\n", server_response);
+        if(receiving < 0)
+        {
+            printf("received is failed\n");
+        }
 
-            write = true;
+        // 3.2. Check sever's response.
+        printf("server: %s\n", server_response);
+
+        write = true;
 
      
 
