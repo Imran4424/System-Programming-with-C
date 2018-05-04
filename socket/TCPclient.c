@@ -74,6 +74,7 @@ int main() {
 	char server_response[256];
 	int buf_size;
 	bool write = false;
+    int good_bye_count = 0;
 
 	//just create a infinity loop
 
