@@ -15,7 +15,7 @@ to run just type
 
 		./orphan_child
 ---------------------------------------------------------
-Necessary System calls:
+Necessary System calls/library functions:
 						fork()
 						getpid()
 ---------------------------------------------------------
