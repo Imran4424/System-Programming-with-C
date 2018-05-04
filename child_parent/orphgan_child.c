@@ -1,4 +1,6 @@
-/*This is a code to demonstrate Orphan child state
+/*
+======================================================================
+This is a code to demonstrate Orphan child state
 
 
 Orphan child is a child process running
@@ -13,6 +15,7 @@ to run just type
 
 		./orphan_child
 
+======================================================================
 */
 
 #include <stdio.h>
