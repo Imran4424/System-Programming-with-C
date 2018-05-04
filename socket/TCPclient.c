@@ -112,6 +112,11 @@ int main() {
 
             write = true;
 
+            if(strcmp(server_response,"good bye") == 0 || strcmp(server_response,"Good Bye") == 0 || strcmp(server_response,"Good bye") == 0)
+            {
+                good_bye_count++;
+            }
+
         }
 
 
