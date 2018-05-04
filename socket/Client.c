@@ -62,7 +62,7 @@ int main() {
 
     int server_socket;
     server_socket = connect(client_socket, sockaddr_ptr, addr_len);
-    
+     
     // STEP-3: recv()
     // 3.1. Receive data from the server
 
