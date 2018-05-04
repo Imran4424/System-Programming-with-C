@@ -45,6 +45,7 @@ int main() {
     client_socket = socket(AF_INET, SOCK_STREAM, 0);
 
     // 1.2. Specify an address for the above socket.
+
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET; 
     server_address.sin_port = htons(12000);
@@ -53,12 +54,11 @@ int main() {
 
     // STEP-2: connect()
     // 2.1. Connect to the remote socket
+
     int addr_len;
     struct sockaddr *sockaddr_ptr;
     addr_len = sizeof(server_address);
     sockaddr_ptr = (struct sockaddr *) &server_address;
-
-
 
     int server_socket;
     server_socket = connect(client_socket, sockaddr_ptr, addr_len);
