@@ -106,6 +106,7 @@ int main()
 		else
 		{
 			
+      printf("%s\n", );
 
 			int receiving = recv(client_socket,client_response,sizeof(client_response),0);
 
