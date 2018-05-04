@@ -58,6 +58,7 @@ int main()
         
     // Listen
     listen(server_socket, 5);
+    
 
     // Accept
     int client_socket;
