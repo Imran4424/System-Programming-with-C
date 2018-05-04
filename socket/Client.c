@@ -79,8 +79,7 @@ int main() {
 
 	while(1)
 	{
-		if(write)
-		{
+		
             printf("server waiting for your response\n");
 
             scanf ("%[^\n]%*c", client_message);
@@ -94,10 +93,7 @@ int main() {
                 perror("sending failed");
             }
 
-            write = false;
-		}		
-		else
-        {
+    
             
             int receiving = recv(client_socket, &server_response, sizeof(server_response), 0);
 
@@ -111,8 +107,7 @@ int main() {
 
             write = true;
 
-        }
-
+     
 
         
 	
