@@ -16,6 +16,7 @@ In termial,
 Necessary System calls:
 						fork()
 						exit(0)
+						getpid()
 ---------------------------------------------------------
 SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
