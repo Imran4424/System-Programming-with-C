@@ -3,6 +3,12 @@
 
 	"perror" and "open"
 
+----------------------------------------------------------------------
+    SHAH MD. IMRAN HOSSAIN
+    Dept. of CSE, University of Rajshahi,
+    Rajshahi-6205, Bangladesh
+----------------------------------------------------------------------
+
 */
 
 
