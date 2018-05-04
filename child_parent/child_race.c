@@ -16,7 +16,15 @@ in terminal,
 	to compile: gcc child_race.c -o child_race
 	to run:     ./child_race
 
-
+---------------------------------------------------------
+Necessary System calls:
+						fork()
+---------------------------------------------------------
+SHAH MD. IMRAN HOSSAIN
+    Dept. of CSE, University of Rajshahi,
+    Rajshahi-6205, Bangladesh
+---------------------------------------------------------
+======================================================================
 */
 
 
