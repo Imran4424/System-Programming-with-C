@@ -21,6 +21,18 @@
        5. recv()
        6. close()         
    ----------------------------------------------------------------------
+   A special message:
+
+            "good bye" or "Good bye" or "Good Bye"
+
+    any of these three messages from,
+                            either sender's end or
+                            receiver's end or
+                            both
+
+                            2 times
+                        
+                        will close the socket
    ----------------------------------------------------------------------
     SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
