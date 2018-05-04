@@ -22,6 +22,7 @@
 ---------------------------------------------------------
 Necessary System calls:
 						fork()
+						getpid()
 ---------------------------------------------------------
 SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
