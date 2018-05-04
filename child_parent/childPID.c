@@ -20,7 +20,7 @@
 	to achieve parent process id for this child
 
 ---------------------------------------------------------
-Necessary System calls:
+Necessary System calls/library functions:
 						fork()
 						getpid()
 						getppid()
