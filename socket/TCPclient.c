@@ -98,9 +98,9 @@ int main() {
             write = false;
 
             if(strcmp(client_message,"good bye") == 0 || strcmp(client_message,"Good Bye") == 0 || strcmp(client_message,"Good bye") == 0)
-        {
-            good_bye_count++;
-        }
+            {
+                good_bye_count++;
+            }
 		}		
 		else
         {
