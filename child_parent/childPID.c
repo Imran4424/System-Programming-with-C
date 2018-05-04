@@ -24,6 +24,7 @@ Necessary System calls:
 						fork()
 						getpid()
 						getppid()
+						wait()
 ---------------------------------------------------------
 SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
