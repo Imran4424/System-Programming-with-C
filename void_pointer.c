@@ -1,6 +1,12 @@
 /*
 	implementing basic concept of void pointer
 
+----------------------------------------------------------------------
+    SHAH MD. IMRAN HOSSAIN
+    Dept. of CSE, University of Rajshahi,
+    Rajshahi-6205, Bangladesh
+----------------------------------------------------------------------
+
 */
 
 
