@@ -96,7 +96,10 @@ int main()
 				perror("In server sending");
 			}
 
-      
+      if(strcmp(server_message,"good bye") == 0 || strcmp(server_message,"Good Bye") == 0 || strcmp(server_message,"Good bye") == 0)
+        {
+            good_bye_count++;
+        }
 
 			write = false;
 		}
