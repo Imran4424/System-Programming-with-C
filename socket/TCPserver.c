@@ -119,7 +119,10 @@ int main()
 
 			write = true;
 
-      		
+      if(strcmp(client_response,"good bye") == 0 || strcmp(client_response,"Good Bye") == 0 || strcmp(client_response,"Good bye") == 0)
+        {
+            good_bye_count++;
+        } 		
 
 		}
 
