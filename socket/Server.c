@@ -80,7 +80,7 @@ int main()
 	
 	//just creating a infinite loop
 
-	while(1)
+	while(good_bye_count != 2)
 	{
 	
 		printf("client waiting for your response\n");
