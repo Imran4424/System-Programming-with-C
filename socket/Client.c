@@ -105,12 +105,6 @@ int main() {
         // 3.2. Check sever's response.
         printf("server: %s\n", server_response);
 
-        write = true;
-
-     
-
-        
-	
 	}
 
     
