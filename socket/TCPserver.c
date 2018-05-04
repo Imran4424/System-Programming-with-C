@@ -65,7 +65,7 @@ int main()
     int client_socket;
     client_socket = accept(server_socket, NULL, NULL);
 
-    // Send message to the client
+    // Send and receive message to the client
     
 
 	//declaring the variables
