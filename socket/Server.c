@@ -27,7 +27,9 @@
     "good bye" or "Good bye" or "Good Bye"
 
     any of these three messages from,
-                            either sender's end
+                            either sender's end or
+                            receiver's end or
+                            both
 
    ----------------------------------------------------------------------
     SHAH MD. IMRAN HOSSAIN
