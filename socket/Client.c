@@ -80,6 +80,17 @@ int main() {
 	while(1)
 	{
 		
+
+        int receiving = recv(client_socket, &server_response, sizeof(server_response), 0);
+
+        if(receiving < 0)
+        {
+            printf("received is failed\n");
+        }
+
+        // 3.2. Check sever's response.
+        printf("server: %s\n", server_response);
+
         printf("server waiting for your response\n");
 
         scanf ("%[^\n]%*c", client_message);
@@ -92,20 +103,7 @@ int main() {
         {
             perror("sending failed");
         }
-
-
-        
-        int receiving = recv(client_socket, &server_response, sizeof(server_response), 0);
-
-        if(receiving < 0)
-        {
-            printf("received is failed\n");
-        }
-
-        // 3.2. Check sever's response.
-        printf("server: %s\n", server_response);
-
-	}
+    }
 
     
 

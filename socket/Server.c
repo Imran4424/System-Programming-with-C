@@ -77,39 +77,33 @@ int main() {
 
 	while(1)
 	{
-		if(write)
+	
+		printf("client waiting for your response\n");
+
+		scanf ("%[^\n]%*c", server_message);
+
+		
+		
+	    int sending = send(client_socket, server_message, sizeof(server_message), 0);
+		
+		if(sending < 0)
 		{
-			printf("client waiting for your response\n");
-
-			scanf ("%[^\n]%*c", server_message);
-
-			
-			
-    	int sending = send(client_socket, server_message, sizeof(server_message), 0);
-			
-			if(sending < 0)
-			{
-				perror("In server sending");
-			}
-
-			write = false;
+			perror("In server sending");
 		}
-		else
+
+
+		
+
+		int receiving = recv(client_socket,client_response,sizeof(client_response),0);
+
+		if(receiving < 0)
 		{
-			
-
-			int receiving = recv(client_socket,client_response,sizeof(client_response),0);
-
-			if(receiving < 0)
-			{
-				perror("In server receiving");
-			}
-
-			printf("client: %s\n", client_response);
-
-			write = true;		
-
+			perror("In server receiving");
 		}
+
+		printf("client: %s\n", client_response);
+
+	
 
 	}
 
