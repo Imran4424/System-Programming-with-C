@@ -21,8 +21,7 @@
        5. recv()
        6. close()         
    ---------------------------------------------------------------------- 
-    Sangeeta Biswas
-    Assistant Professor,
+    SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
     Rajshahi-6205, Bangladesh
    ---------------------------------------------------------------------- 
