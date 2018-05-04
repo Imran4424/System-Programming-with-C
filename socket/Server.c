@@ -30,7 +30,7 @@
 */
 
 #include <sys/socket.h> 	// For system call: socket().
-#include <netinet/in.h>     
+#include <netinet/in.h>     // For sockaddr_in, sockaddr, htons(). 
 #include <unistd.h>
 #include <stdio.h>          // For standard input-output.
 #include <stdbool.h>
