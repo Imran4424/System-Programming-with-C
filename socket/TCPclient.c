@@ -1,5 +1,6 @@
 /* =====================================================================
-	Socket Programming-1
+	Socket Programming:
+
     This progam is for creating a client socket. The client socket 
        (a) is created with a socket() call, 
        (b) is connected with a remote address with a connect() call, 
@@ -17,12 +18,10 @@
        3. recv()
        4. close()  
    ----------------------------------------------------------------------
-    Sangeeta Biswas
-    Assistant Professor,
+    SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
     Rajshahi-6205, Bangladesh
    ----------------------------------------------------------------------
-    28/8/2017
 	======================================================================
 */
 
