@@ -1,6 +1,6 @@
 /* ======================================================================
 	Socket Programming:
-    
+
    This progam is for creating a server socket. The server socket
        (a) is created with a socket() call
        (b) is bound with an IP address and Port
@@ -38,7 +38,8 @@
 
 
 
-int main() {
+int main() 
+{
     // Create a socket
     int server_socket;
     server_socket = socket(AF_INET, SOCK_STREAM, 0);
