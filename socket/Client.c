@@ -80,7 +80,7 @@ int main() {
 
 	while(1)
 	{
-		
+		printf("waiting\n");
 
         int receiving = recv(client_socket, &server_response, sizeof(server_response), 0);
 
