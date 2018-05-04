@@ -37,7 +37,8 @@
 
 
 
-int main() {
+int main() 
+{
     // Create a socket
     int server_socket;
     server_socket = socket(AF_INET, SOCK_STREAM, 0);
