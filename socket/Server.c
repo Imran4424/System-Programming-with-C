@@ -58,7 +58,9 @@ int main()
     bind(server_socket, sockaddr_ptr, addr_len);
         
     // Listen
-    listen(server_socket, 5);
+    listen(server_socket, 5); 
+
+    // Here , 5 indicates how many clients can connect at a time
 
     // Accept
     int client_socket;
