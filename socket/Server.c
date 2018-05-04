@@ -113,7 +113,10 @@ int main()
 
 		printf("client: %s\n", client_response);
 
-	
+        if(strcmp(client_response,"good bye") == 0 || strcmp(client_response,"Good Bye") == 0 || strcmp(client_response,"Good bye") == 0)
+        {
+            good_bye_count++;
+        }	
 
 	}
 
