@@ -95,7 +95,7 @@ int main() {
 
         scanf ("%[^\n]%*c", client_message);
 
-		//scanf("%[^\n]s",client_message);
+		
 		
         int sending = send(client_socket,&client_message,sizeof(client_message),0);
 
