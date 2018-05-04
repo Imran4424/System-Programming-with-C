@@ -117,7 +117,9 @@ int main()
 
 			printf("client: %s\n", client_response);
 
-			write = true;		
+			write = true;
+
+      		
 
 		}
 
