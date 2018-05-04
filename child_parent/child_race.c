@@ -20,6 +20,8 @@ in terminal,
 Necessary System calls:
 						fork()
 						getpid()
+						write()
+						sprintf()
 ---------------------------------------------------------
 SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
