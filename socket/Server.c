@@ -24,7 +24,7 @@
    ----------------------------------------------------------------------
     A special message:
 
-    "good bye" or "Good bye" or "Good Bye"
+            "good bye" or "Good bye" or "Good Bye"
 
     any of these three messages from,
                             either sender's end or
