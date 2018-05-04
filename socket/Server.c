@@ -31,6 +31,8 @@
                             receiver's end or
                             both
 
+                            2 times
+
    ----------------------------------------------------------------------
     SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
