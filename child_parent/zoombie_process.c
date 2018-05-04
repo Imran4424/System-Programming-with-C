@@ -9,6 +9,9 @@ In termial,
 	To compile:  gcc zoombie_process.c -o zoombie_process
 
 	To run:      ./zoombie_process
+---------------------------------------------------------
+
+---------------------------------------------------------
 
 */
 
