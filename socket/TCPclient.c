@@ -114,18 +114,7 @@ int main() {
         }
 
 
-        /*
-        if(write)
-        {
-            write = false;
-            printf("hi write\n");
-           
-        }
-        else
-        {
-            write = true;
-            printf("hi read\n");
-        }*/
+        
 	
 	}
 
