@@ -1,5 +1,6 @@
 /* ======================================================================
-	Socket Programming
+	Socket Programming:
+    
    This progam is for creating a server socket. The server socket
        (a) is created with a socket() call
        (b) is bound with an IP address and Port
