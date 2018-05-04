@@ -29,7 +29,7 @@
 	======================================================================
 */
 
-#include <sys/socket.h> 	
+#include <sys/socket.h> 	// For system call: socket().
 #include <netinet/in.h>
 #include <unistd.h>
 #include <stdio.h>
