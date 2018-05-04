@@ -99,7 +99,8 @@ int main() {
 		}		
 		else
         {
-            
+            printf("%s\n", );
+
             int receiving = recv(client_socket, &server_response, sizeof(server_response), 0);
 
             if(receiving < 0)
