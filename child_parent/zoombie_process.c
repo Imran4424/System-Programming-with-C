@@ -13,7 +13,7 @@ In termial,
 
 	To run:      ./zoombie_process
 ---------------------------------------------------------
-Necessary System calls:
+Necessary System calls/library functions:
 						fork()
 						exit(0)
 						getpid()
