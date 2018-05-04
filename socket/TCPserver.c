@@ -96,6 +96,8 @@ int main()
 				perror("In server sending");
 			}
 
+      
+
 			write = false;
 		}
 		else
