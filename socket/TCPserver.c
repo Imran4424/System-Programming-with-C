@@ -73,6 +73,7 @@ int main()
 	char server_message[256];
 	char client_response[256];
 	bool write = true;
+  int good_bye_count = 0;
     
 
 	
