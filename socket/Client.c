@@ -89,7 +89,7 @@ int main() {
             printf("received is failed\n");
         }
 
-        if(strcmp(server_response,"good bye") == 0 || strcmp(server_response,"Good Bye") == 0 || strcmp(server_message,"Good bye") == 0)
+        if(strcmp(server_response,"good bye") == 0 || strcmp(server_response,"Good Bye") == 0 || strcmp(server_response,"Good bye") == 0)
         {
             good_bye_count++;
         }
