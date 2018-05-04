@@ -14,7 +14,15 @@ to compile this code on linux, in terminal
 to run just type
 
 		./orphan_child
-
+---------------------------------------------------------
+Necessary System calls:
+						fork()
+						exit(0)
+---------------------------------------------------------
+SHAH MD. IMRAN HOSSAIN
+    Dept. of CSE, University of Rajshahi,
+    Rajshahi-6205, Bangladesh
+---------------------------------------------------------
 ======================================================================
 */
 
