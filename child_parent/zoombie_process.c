@@ -10,7 +10,7 @@ In termial,
 
 	To run:      ./zoombie_process
 ---------------------------------------------------------
-Necessary System call
+Necessary System calls:
 ---------------------------------------------------------
 
 */
