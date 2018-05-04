@@ -32,7 +32,8 @@
                             both
 
                             2 times
-
+                        
+                        will close the socket
    ----------------------------------------------------------------------
     SHAH MD. IMRAN HOSSAIN
     Dept. of CSE, University of Rajshahi,
