@@ -1,5 +1,5 @@
 /* ======================================================================
-	Socket Programming-1
+	Socket Programming
    This progam is for creating a server socket. The server socket
        (a) is created with a socket() call
        (b) is bound with an IP address and Port
@@ -31,7 +31,7 @@
 
 #include <sys/socket.h> 	// For system call: socket().
 #include <netinet/in.h>     // For sockaddr_in, sockaddr, htons(). 
-#include <unistd.h>
+#include <unistd.h>         // For close().
 #include <stdio.h>          // For standard input-output.
 #include <stdbool.h>
 
