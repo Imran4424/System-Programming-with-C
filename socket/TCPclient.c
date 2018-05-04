@@ -101,6 +101,7 @@ int main() {
             {
                 good_bye_count++;
             }
+            
 		}		
 		else
         {
