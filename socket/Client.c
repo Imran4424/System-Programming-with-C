@@ -47,6 +47,7 @@
 #include <sys/types.h>
 #include <arpa/inet.h>
 #include <stdbool.h>
+#include <string.h>
 
 
 
