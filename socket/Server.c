@@ -48,6 +48,7 @@
 #include <unistd.h>         // For close().
 #include <stdio.h>          // For standard input-output.
 #include <stdbool.h>
+#include <string.h>
 
 
 
