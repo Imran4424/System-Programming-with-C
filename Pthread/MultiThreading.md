@@ -10,3 +10,4 @@ pthreads (POSIX threads) is a widely used standard C language API for implementi
 
 Even today pthreads remains a powerful, lower-level, and highly compatible option, especially when interfacing with existing C codebases or requiring specific system-level control.
 
+### Why do we use it?
