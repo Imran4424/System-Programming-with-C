@@ -14,4 +14,4 @@ Even today pthreads remains a powerful, lower-level, and highly compatible optio
 
 The primary reasons for using pthreads are to introduce concurrency and parallelism into a program:
 
-- 
+- **Performance:** By executing tasks concurrently, applications can better utilize multi-core processors, leading to faster execution times for compute-intensive operations
