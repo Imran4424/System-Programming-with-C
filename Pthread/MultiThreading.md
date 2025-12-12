@@ -6,4 +6,4 @@ pthreads stands for POSIX threads (Portable Operating System Interface) which is
 #include <pthread.h>
 ```
 
-pthreads (POSIX threads) is a widely used standard C language API for implementing multithreading. Since pthreads can not run on non-Unix Operating Systems, C++ 11 introduced it's own library `<thread>` which can implement multi-threading in platform independent manner (it can run on any Operating Systems)
+pthreads (POSIX threads) is a widely used standard C language API for implementing multithreading. Since pthreads can not run on non-Unix Operating Systems, C++ 11 introduced it's own library `<thread>` which can implement multi-threading in platform independent manner (it can run on any Operating Systems).
