@@ -5,3 +5,5 @@ pthreads stands for POSIX threads (Portable Operating System Interface) which is
 ```cpp
 #include <pthread.h>
 ```
+
+pthreads (POSIX threads) is a widely used standard C language API for implementing multithreading.
