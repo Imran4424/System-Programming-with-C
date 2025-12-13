@@ -177,7 +177,7 @@ int pthread_create(pthread_t *thread,
 
 ### Thread scheduling policy
 
-With the help of `pthread_attr_t` 
+With the help of `pthread_attr_t` we can set Thread scheduling policy for setting execution priority of threads.
 
 
 
