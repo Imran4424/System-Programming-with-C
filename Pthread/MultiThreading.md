@@ -17,3 +17,5 @@ The primary reasons for using pthreads are to introduce concurrency and parallel
 - **Performance:** By executing tasks concurrently, applications can better utilize multi-core processors, leading to faster execution times for compute-intensive operations.
 - **Responsiveness:** In applications like user interfaces or servers, threads allow one part of the program to handle a long-running operation (e.g., fetching data from a network) without blocking the main program loop, keeping the application responsive.
 - **System Control:** As a mature, C-based standard, pthreads offers granular control over thread properties (like scheduling priority and stack size) that may not be as readily exposed in the higher-level C++11 `<thread>` library.
+
+# How to create a pthread
