@@ -67,3 +67,8 @@ int main() {
     return 0;
 }
 ```
+
+### Key functions to remember
+
+
+
