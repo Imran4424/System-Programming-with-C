@@ -23,3 +23,47 @@ The primary reasons for using pthreads are to introduce concurrency and parallel
 Firstly, we need to  include `<pthread.h>` header in our C/C++ code.
 
 Secondly, we need to create a thread with `pthread_create()`, and then waiting for that thread to complete its work using `pthread_join()`.
+
+```cpp
+#include <iostream>
+#include <pthread.h>
+#include <unistd.h> // For sleep()
+
+using namespace std;
+
+// This function is executed by the new thread
+void* print_message(void* data) {
+    string message = *((string*) data);
+    cout << "Thread ID: " << pthread_self() << ". Message: " << message << endl;
+    sleep(1); // Simulate some work
+    cout << "Thread " << pthread_self() << " finished." << endl;
+    pthread_exit(NULL); // Optional: explicitly exit the thread
+}
+
+int main() {
+    pthread_t thread_id;
+    string msg = "Hello from a new thread!";
+    int rc;
+
+    cout << "Main program starting. Main Thread ID: " << pthread_self() << endl;
+
+    // Create the thread:
+    // 1st arg: address of pthread_t variable
+    // 2nd arg: thread attributes (NULL for default)
+    // 3rd arg: pointer to the function to execute (thread entry point)
+    // 4th arg: arguments to pass to the function (must be a void* pointer)
+    rc = pthread_create(&thread_id, NULL, print_message, &msg);
+
+    if (rc) {
+        cerr << "Error: unable to create thread, return code: " << rc << endl;
+        return 1;
+    }
+
+    // Main thread waits for the newly created thread to finish
+    pthread_join(thread_id, NULL);
+
+    cout << "Main program exiting." << endl;
+
+    return 0;
+}
+```
