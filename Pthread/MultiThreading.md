@@ -318,4 +318,48 @@ A race condition in pthreads (or any multithreaded environment) occurs when mult
 The outcome of the operation then becomes dependent on the unpredictable timing or interleaving of the threads' execution, leading to inconsistent or incorrect results.
 
 
+Code example of race condition
+
+```cpp
+#include <iostream>
+#include <pthread.h>
+#include <unistd.h>
+
+using namespace std;
+
+// This is the shared resource, vulnerable to a race condition
+long long int shared_counter = 0;
+const int ITERATIONS = 1000000;
+
+// Function run by both threads
+void* increment_counter(void* arg) {
+    for (int i = 0; i < ITERATIONS; ++i) {
+        // CRITICAL SECTION: Unprotected read-modify-write operation
+        shared_counter++; 
+    }
+    
+    pthread_exit(NULL);
+}
+
+int main() {
+    pthread_t t1, t2;
+
+    // Create two threads that both try to update shared_counter
+    pthread_create(&t1, NULL, increment_counter, NULL);
+    pthread_create(&t2, NULL, increment_counter, NULL);
+
+    // Wait for both threads to finish
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
+
+    // The expected result should be 2,000,000
+    cout << "Expected final count: " << (long long int)ITERATIONS * 2 << endl;
+    // Actual result will likely be less than expected due to race condition
+    cout << "Actual final count:   " << shared_counter << endl;
+
+    return 0;
+}
+```
+
+
 ### 
