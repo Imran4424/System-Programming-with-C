@@ -196,7 +196,7 @@ This is a real-time scheduling policy designed for applications requiring highly
 - **Behavior:** It is a strict priority-based policy with no time-slicing among threads of the same priority. The highest-priority `SCHED_FIFO` thread that is ready to run will continue running until one of three things happens: it voluntarily yields the processor, it blocks (e.g., waits for I/O or a mutex), or a thread with an even higher priority becomes ready.
 - **Priorities:** Uses a fixed numerical priority range, typically 1 (lowest RT priority) to 99 (highest RT priority) on Linux systems.
   - A thread with priority 1 using `SCHED_FIFO` will always preempt and run before any `SCHED_OTHER` thread (which implicitly runs at priority 0).
-  - But 
+  - While thread with higher priority with `SCHED_FIFO` 
 
 
 Modified code with scheduling thread priority
