@@ -183,6 +183,9 @@ There are three main thread policies
 
 #### `SCHED_OTHER` (Default Time-Sharing Policy)
 
+This is the default scheduling policy for most standard, non-real-time applications on Linux and many Unix systems
+
+- **Behavior:** It implements a time-sharing or "fair-share" approach. All threads with this policy are given an opportunity to run.
 
 
 Modified code with scheduling thread priority
