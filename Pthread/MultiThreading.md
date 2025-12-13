@@ -76,3 +76,74 @@ int main() {
 - `pthread_exit()`: Terminates the calling thread.
 - `pthread_self()`: Returns the ID of the current thread.
 
+```cpp
+#include <iostream>
+#include <pthread.h>
+#include <unistd.h>
+#include <array>
+#include <string>
+
+using namespace std;
+
+const int NUM_THREADS = 5;
+
+// Structure to pass multiple arguments to the thread function
+struct ThreadData {
+    int thread_id;
+    string message;
+};
+
+// This function is executed by all new threads
+void* worker_thread(void* arg) {
+    ThreadData *data = static_cast<ThreadData*>(arg);
+
+    cout << "[Thread " << data->thread_id << "] starting execution. Message: \"" << data -> message << "\"" << endl;
+
+    // Simulate some variable work time based on the thread ID
+    sleep(NUM_THREADS - data -> thread_id + 1);
+
+    cout << "[Thread " << data -> thread_id << "] finished its work and exiting." << endl;
+    
+    // We don't need pthread_exit() here if the function returns naturally,
+    // but it can be used for explicit control: pthread_exit(NULL);
+    return NULL;
+}
+
+int main() {
+    // Array to hold thread identifiers
+    pthread_t threads[NUM_THREADS];
+    
+    // Array of structures to hold unique data for each thread
+    ThreadData td[NUM_THREADS];
+    int rc; // Return code holder
+
+    cout << "Main program starting. Preparing to create " << NUM_THREADS << " threads." << endl;
+
+    for (int i = 0; i < NUM_THREADS; ++i) {
+        // Prepare the unique data for the current thread
+        td[i].thread_id = i;
+        td[i].message = "Task " + to_string(i);
+
+        cout << "Main: creating thread " << i << endl;
+
+        // Create the thread, passing a pointer to the unique data structure
+        rc = pthread_create(&threads[i], NULL, worker_thread, (void *)&td[i]);
+
+        if (rc) {
+            cerr << "Error: unable to create thread, return code: " << rc << endl;
+            return 1;
+        }
+    }
+
+    // --- Synchronization Point ---
+    // The main thread now waits for *all* the created threads to terminate.
+    for (int i = 0; i < NUM_THREADS; ++i) {
+        pthread_join(threads[i], NULL);
+        cout << "Main: Joined with thread " << i << "." << endl;
+    }
+
+    cout << "Main program exiting after all threads completed." << endl;
+
+    return 0;
+}
+```
