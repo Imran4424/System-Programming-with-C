@@ -20,4 +20,6 @@ The primary reasons for using pthreads are to introduce concurrency and parallel
 
 # How to create a pthread
 
-First, we need to  include `<pthread.h>` header in our C/C++ code.
+Firstly, we need to  include `<pthread.h>` header in our C/C++ code.
+
+Secondly, we need to create a thread with `pthread_create()`, and then waiting for that thread to complete its work using `pthread_join()`.
