@@ -135,7 +135,8 @@ int main() {
         }
     }
 
-    // up
+    // upon creation thread starts running immediately
+    // And they can run in any order
 
     // --- Synchronization Point ---
     // The main thread now waits for *all* the created threads to terminate.
