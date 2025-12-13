@@ -135,7 +135,7 @@ int main() {
         }
     }
 
-    //  The Threads Execute Concurrently
+    // The Threads Execute Concurrently
     // upon creation thread starts running immediately
     // And they can run in any order
 
