@@ -170,7 +170,6 @@ int pthread_create(pthread_t *thread,
     - thread execution policy (in other words priority)
 - `void *(*start_routine)(void *)`: pointer to the function the new thread will run. (must match the signature)
 - `void *arg`: a single pointer passed to `start_routine`. Commonly a pointer to a struct/object holding multiple values.
-
-Return values
-
-- 0
+- Return values
+  - Returns 0 on success
+  - Returns a non-zero error number on failure
