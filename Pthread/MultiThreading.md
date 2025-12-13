@@ -110,7 +110,8 @@ void* worker_thread(void* arg) {
     return NULL;
 }
 
-int main() {
+int main() 
+{
     // Array to hold thread identifiers
     pthread_t threads[NUM_THREADS];
     
