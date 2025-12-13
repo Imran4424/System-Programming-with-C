@@ -211,7 +211,7 @@ This is a modification of `SCHED_FIFO`, also used for real-time applications.
 
 Some operating systems implement non-POSIX standard policies, such as `SCHED_BATCH` (for CPU-intensive, non-interactive batch jobs) or `SCHED_IDLE` (for extremely low-priority background tasks). These are platform-specific extensions. 
 
-Modified code with scheduling thread priority
+Modified code example with scheduling thread priority
 
 ```cpp
 #include <iostream>
