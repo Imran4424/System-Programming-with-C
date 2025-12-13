@@ -49,7 +49,7 @@ int main() {
 
     // Create the thread:
     // 1st arg: address of pthread_t variable
-    // 2nd arg: thread attributes (NULL for default)
+    // 2nd arg: thread attributes (NULL for default) (these argument can set scheduling policy)
     // 3rd arg: pointer to the function to execute (thread entry point)
     // 4th arg: arguments to pass to the function (must be a void* pointer)
     creationStatus = pthread_create(&thread_id, NULL, print_message, &msg);
@@ -151,3 +151,4 @@ int main() {
     return 0;
 }
 ```
+
