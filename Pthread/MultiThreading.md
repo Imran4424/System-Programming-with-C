@@ -115,7 +115,7 @@ int main() {
     
     // Array of structures to hold unique data for each thread
     ThreadData td[NUM_THREADS];
-    int rc; // Return code holder
+    int creationStatus; // Return code holder
 
     cout << "Main program starting. Preparing to create " << NUM_THREADS << " threads." << endl;
 
@@ -127,13 +127,15 @@ int main() {
         cout << "Main: creating thread " << i << endl;
 
         // Create the thread, passing a pointer to the unique data structure
-        rc = pthread_create(&threads[i], NULL, worker_thread, (void *)&td[i]);
+        creationStatus = pthread_create(&threads[i], NULL, worker_thread, (void *)&td[i]);
 
-        if (rc) {
-            cerr << "Error: unable to create thread, return code: " << rc << endl;
+        if (creationStatus) {
+            cerr << "Error: unable to create thread, return code: " << creationStatus << endl;
             return 1;
         }
     }
+
+    // up
 
     // --- Synchronization Point ---
     // The main thread now waits for *all* the created threads to terminate.
