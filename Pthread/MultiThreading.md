@@ -186,6 +186,10 @@ There are three main thread policies
 This is the default scheduling policy for most standard, non-real-time applications on Linux and many Unix systems
 
 - **Behavior:** It implements a time-sharing or "fair-share" approach. All threads with this policy are given an opportunity to run.
+- **Priorities:** The numeric priority parameter in pthreads is ignored for this policy (it's effectively 0). Instead, the system uses a dynamic priority system based on the thread's "niceness" value (a value from -20 to 19 that influences how much CPU time a process gets), I/O wait time, and CPU usage. The scheduler tries to be fair and responsive, ensuring no thread is completely starved of CPU time.
+- **Permissions:** No special permissions are required to use this policy.
+
+#### SCHED_FIFO (First-In, First-Out Real-Time Policy)
 
 
 Modified code with scheduling thread priority
