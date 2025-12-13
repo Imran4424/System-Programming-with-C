@@ -40,7 +40,8 @@ void* print_message(void* data) {
     pthread_exit(NULL); // Optional: explicitly exit the thread
 }
 
-int main() {
+int main() 
+{
     pthread_t thread_id;
     string msg = "Hello from a new thread!";
     int creationStatus;
