@@ -253,9 +253,9 @@ int main() {
         }
 
         // 5. Create the thread using the configured attributes
-        int rc = pthread_create(&threads[i], &attr, worker_thread, (void *)&td[i]);
-        if (rc) {
-            cerr << "Error creating thread " << i << ": return code " << rc << endl;
+        int creationStatus = pthread_create(&threads[i], &attr, worker_thread, (void *)&td[i]);
+        if (creationStatus) {
+            cerr << "Error creating thread " << i << ": return code " << creationStatus << endl;
             return 1;
         }
     }
