@@ -173,3 +173,102 @@ int pthread_create(pthread_t *thread,
 - Return values
   - Returns 0 on success
   - Returns a non-zero error number on failure
+
+
+```cpp
+#include <iostream>
+#include <pthread.h>
+#include <unistd.h>
+#include <string>
+#include <sched.h>   // Required for scheduling functions/constants
+#include <errno.h>   // For error handling
+#include <cstring>   // For strerror
+
+using namespace std;
+
+const int NUM_THREADS = 5;
+
+struct ThreadData {
+    int thread_id;
+    string message;
+};
+
+void* worker_thread(void* arg) {
+    ThreadData *data = static_cast<ThreadData*>(arg);
+    
+    // Optional: Get and print the runtime priority of the running thread
+    struct sched_param param;
+    int policy;
+    pthread_getschedparam(pthread_self(), &policy, &param);
+    
+    cout << "[Thread " << data->thread_id << "] PID " << getpid() 
+         << " running with priority: " << param.sched_priority 
+         << " (Policy: " << (policy == SCHED_FIFO ? "FIFO" : (policy == SCHED_RR ? "RR" : "OTHER")) << ")" << endl;
+
+    sleep(1 + data->thread_id); // Longer sleep for lower ID threads to show priority effect
+
+    cout << "[Thread " << data->thread_id << "] finished." << endl;
+    return NULL;
+}
+
+int main() {
+    pthread_t threads[NUM_THREADS];
+    ThreadData td[NUM_THREADS];
+    
+    // 1. Initialize Thread Attributes Object
+    pthread_attr_t attr;
+    pthread_attr_init(&attr);
+    
+    // 2. Set the inheritance scope to explicit (essential for setting custom params)
+    pthread_attr_setinheritsched(&attr, PTHREAD_EXPLICIT_SCHED);
+    
+    // Define scheduling parameters structure
+    struct sched_param param;
+
+    cout << "Main program starting. " << endl;
+
+    for (int i = 0; i < NUM_THREADS; ++i) {
+        td[i].thread_id = i;
+        td[i].message = "Task " + to_string(i);
+
+        // 3. Determine the priority value (High for T0, gradually lower for others)
+        // This is tricky: SCHED_OTHER uses 'nice' values, SCHED_FIFO uses 1-99 range.
+        // We will stick to the default policy and adjust 'nice' behavior if possible,
+        // or attempt a real-time priority (which needs root).
+
+        // Example attempting to use real-time priority for demonstration:
+        int base_prio = sched_get_priority_min(SCHED_FIFO);
+        int priority_to_set = base_prio + (NUM_THREADS - i); // T0 gets prio 5, T4 gets prio 1 (relative)
+
+        param.sched_priority = priority_to_set;
+
+        // 4. Set the scheduling policy and parameter in the attribute object
+        // NOTE: SCHED_FIFO generally requires root permissions.
+        if (pthread_attr_setschedpolicy(&attr, SCHED_FIFO) != 0) {
+            cerr << "Warning: Could not set SCHED_FIFO policy. Running with default policy." << endl;
+        }
+        if (pthread_attr_setschedparam(&attr, &param) != 0) {
+            cerr << "Warning: Could not set priority " << priority_to_set << ". Reason: " 
+                 << strerror(errno) << endl;
+        }
+
+        // 5. Create the thread using the configured attributes
+        int rc = pthread_create(&threads[i], &attr, worker_thread, (void *)&td[i]);
+        if (rc) {
+            cerr << "Error creating thread " << i << ": return code " << rc << endl;
+            return 1;
+        }
+    }
+
+    // Clean up attributes object once all threads are created
+    pthread_attr_destroy(&attr);
+
+    // Wait for all threads to join
+    for (int i = 0; i < NUM_THREADS; ++i) {
+        pthread_join(threads[i], NULL);
+    }
+
+    cout << "Main program exiting." << endl;
+    return 0;
+}
+```
