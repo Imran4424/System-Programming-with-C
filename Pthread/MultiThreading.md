@@ -162,3 +162,9 @@ int pthread_create(pthread_t *thread,
                    void *(*start_routine)(void *),
                    void *arg);
 ```
+
+- `pthread_t`: Contains the newly created thread id
+- `pthread_attr_t`: Contains newly created thread attributes (Use `NULL` for default attributes.)
+    - stack size
+    - detach state
+    - 
