@@ -315,4 +315,7 @@ int main() {
 
 A race condition in pthreads (or any multithreaded environment) occurs when multiple threads concurrently access shared data, and at least one of them modifies that data.
 
+The outcome of the operation then becomes dependent on the unpredictable timing or interleaving of the threads' execution, leading to inconsistent or incorrect results.
+
+
 ### 
