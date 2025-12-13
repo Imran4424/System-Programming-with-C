@@ -157,5 +157,8 @@ int main() {
 Let's look at the synopsis of `pthread_create`
 
 ```cpp
-
+int pthread_create(pthread_t *thread,
+                   const pthread_attr_t *attr,
+                   void *(*start_routine)(void *),
+                   void *arg);
 ```
