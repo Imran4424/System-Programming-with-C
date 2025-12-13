@@ -43,7 +43,7 @@ void* print_message(void* data) {
 int main() {
     pthread_t thread_id;
     string msg = "Hello from a new thread!";
-    int rc;
+    int creationStatus;
 
     cout << "Main program starting. Main Thread ID: " << pthread_self() << endl;
 
@@ -52,10 +52,10 @@ int main() {
     // 2nd arg: thread attributes (NULL for default)
     // 3rd arg: pointer to the function to execute (thread entry point)
     // 4th arg: arguments to pass to the function (must be a void* pointer)
-    rc = pthread_create(&thread_id, NULL, print_message, &msg);
+    creationStatus = pthread_create(&thread_id, NULL, print_message, &msg);
 
-    if (rc) {
-        cerr << "Error: unable to create thread, return code: " << rc << endl;
+    if (creationStatus) {
+        cerr << "Error: unable to create thread, return code: " << creationStatus << endl;
         return 1;
     }
 
