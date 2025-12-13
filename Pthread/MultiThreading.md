@@ -310,3 +310,9 @@ int main() {
     return 0;
 }
 ```
+
+# Race Condition
+
+A race condition in pthreads (or any multithreaded environment) occurs when multiple threads concurrently access shared data, and at least one of them modifies that data.
+
+### 
