@@ -177,7 +177,7 @@ int pthread_create(pthread_t *thread,
 
 ### Thread scheduling policy
 
-with the help of `pthread_attr_t` 
+With the help of `pthread_attr_t` 
 
 
 
