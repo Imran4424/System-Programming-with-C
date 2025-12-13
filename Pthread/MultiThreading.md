@@ -152,3 +152,10 @@ int main() {
 }
 ```
 
+### How to set priority to thread
+
+Let's look at the synopsis of `pthread_create`
+
+```cpp
+
+```
