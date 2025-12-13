@@ -201,6 +201,8 @@ This is a real-time scheduling policy designed for applications requiring highly
 
 #### `SCHED_RR` (Round-Robin Real-Time Policy)
 
+This is a modification of `SCHED_FIFO`, also used for real-time applications.
+
 
 
 
