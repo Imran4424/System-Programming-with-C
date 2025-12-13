@@ -70,5 +70,8 @@ int main() {
 
 ### Key functions to remember
 
-
+- `pthread_create()`: Starts a new thread, pointing to a specific function
+- `pthread_join()`: Blocks the calling thread (e.g., main) until the specified target thread terminates. This ensures synchronization
+- `pthread_exit()`: Terminates the calling thread.
+- `pthread_self()`: Returns the ID of the current thread.
 
