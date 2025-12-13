@@ -207,6 +207,10 @@ This is a modification of `SCHED_FIFO`, also used for real-time applications.
 - **Priorities:** Uses the same fixed numerical priority range (e.g., 1 to 99) as `SCHED_FIFO`.
 - **Permissions:** Also typically requires root privileges, similar to `SCHED_FIFO`.
 
+#### Other (Non-Standard) Policies
+
+Some operating systems implement non-POSIX standard policies, such as `SCHED_BATCH` (for CPU-intensive, non-interactive batch jobs) or `SCHED_IDLE` (for extremely low-priority background tasks). These are platform-specific extensions. 
+
 Modified code with scheduling thread priority
 
 ```cpp
