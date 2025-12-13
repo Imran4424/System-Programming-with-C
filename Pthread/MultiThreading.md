@@ -167,4 +167,4 @@ int pthread_create(pthread_t *thread,
 - `pthread_attr_t`: Contains newly created thread attributes (Use `NULL` for default attributes.)
     - stack size
     - detach state
-    - 
+    - thread execution policy (in other words priority)
