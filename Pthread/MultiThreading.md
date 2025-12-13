@@ -344,7 +344,8 @@ void* increment_counter(void* arg) {
     pthread_exit(NULL);
 }
 
-int main() {
+int main() 
+{
     pthread_t t1, t2;
 
     // Create two threads that both try to update shared_counter
