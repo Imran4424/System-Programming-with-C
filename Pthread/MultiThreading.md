@@ -249,7 +249,8 @@ void* worker_thread(void* arg) {
     return NULL;
 }
 
-int main() {
+int main() 
+{
     pthread_t threads[NUM_THREADS];
     ThreadData td[NUM_THREADS];
     
@@ -337,7 +338,7 @@ void* increment_counter(void* arg) {
         // CRITICAL SECTION: Unprotected read-modify-write operation
         shared_counter++; 
     }
-    
+
     pthread_exit(NULL);
 }
 
