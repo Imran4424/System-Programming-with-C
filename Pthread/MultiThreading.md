@@ -203,9 +203,9 @@ This is a real-time scheduling policy designed for applications requiring highly
 
 This is a modification of `SCHED_FIFO`, also used for real-time applications.
 
-- **Behavior:** It behaves exactly like SCHED_FIFO with one key difference: it uses time-slicing for threads of equal priority. If multiple SCHED_RR threads have the same high priority, they run in a round-robin fashion, each receiving a fixed time slice before being moved to the back of the queue for their priority level.
-
-
+- **Behavior:** It behaves exactly like SCHED_FIFO with one key difference: it uses time-slicing for threads of equal priority. If multiple `SCHED_RR` threads have the same high priority, they run in a round-robin fashion, each receiving a fixed time slice before being moved to the back of the queue for their priority level.
+- **Priorities:** Uses the same fixed numerical priority range (e.g., 1 to 99) as `SCHED_FIFO`.
+- **Permissions:** Also typically requires root privileges, similar to `SCHED_FIFO`.
 
 Modified code with scheduling thread priority
 
