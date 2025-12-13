@@ -175,6 +175,12 @@ int pthread_create(pthread_t *thread,
   - Returns a non-zero error number on failure
 
 
+### Thread scheduling policy
+
+with the help of `pthread_attr_t` 
+
+
+
 Modified code with scheduling thread priority
 
 ```cpp
