@@ -366,4 +366,52 @@ int main()
 ```
 
 
-### 
+### Mutex Lock
+
+```cpp
+#include <iostream>
+#include <pthread.h>
+
+using namespace std;
+
+long long shared_counter = 0;
+const int ITERATIONS = 1000000;
+// Declare a global mutex variable
+pthread_mutex_t counter_mutex;
+
+void* increment_counter_safe(void* arg) {
+    for (int i = 0; i < ITERATIONS; ++i) {
+        // 1. Lock the mutex before accessing the shared resource
+        pthread_mutex_lock(&counter_mutex); 
+        
+        // CRITICAL SECTION (now protected)
+        shared_counter++;
+        
+        // 2. Unlock the mutex immediately after the operation is complete
+        pthread_mutex_unlock(&counter_mutex);
+    }
+    pthread_exit(NULL);
+}
+
+int main() {
+    pthread_t t1, t2;
+
+    // Initialize the mutex before use
+    pthread_mutex_init(&counter_mutex, NULL);
+
+    pthread_create(&t1, NULL, increment_counter_safe, NULL);
+    pthread_create(&t2, NULL, increment_counter_safe, NULL);
+
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
+
+    cout << "Expected final count: " << (long long)ITERATIONS * 2 << endl;
+    // The actual count will now consistently match the expected count
+    cout << "Actual final count:   " << shared_counter << endl;
+
+    // Destroy the mutex after it is no longer needed
+    pthread_mutex_destroy(&counter_mutex);
+
+    return 0;
+}
+```
