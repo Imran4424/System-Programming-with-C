@@ -370,6 +370,7 @@ The classic example of a race condition is incrementing a shared counter. The op
 2. Increment the value in the register.
 3. Write the new value back to the memory location of `counter`
 
+If two threads perform this operation concurrently without synchronization, then there will be data lost since they are writing the same variable at the same time with different value (based on their read value).
 
 
 ### Mutex Lock
