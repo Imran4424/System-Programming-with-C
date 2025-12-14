@@ -320,7 +320,6 @@ A race condition in pthreads (or any multithreaded environment) occurs when mult
 
 The outcome of the operation then becomes dependent on the unpredictable timing or interleaving of the threads' execution, leading to inconsistent or incorrect results.
 
-
 Code example of race condition
 
 ```cpp
@@ -364,6 +363,13 @@ int main()
     return 0;
 }
 ```
+
+The classic example of a race condition is incrementing a shared counter. The operation `counter++` looks like a single step in C++, but the CPU actually performs three separate instructions:
+
+1. Read the current value of `counter` into a CPU register.
+2. Increment the value in the register.
+3. Write the new value back to the memory location of `counter`
+
 
 
 ### Mutex Lock
