@@ -368,8 +368,10 @@ int main()
 
 ### Mutex Lock
 
-To prevent a race condition, you must ensure mutual exclusion within the critical section of your code (the part that accesses shared mutable state). In pthreads, the primary tool for this is a mutex (mutual exclusion lock). 
+To prevent a race condition, we must ensure mutual exclusion within the critical section of our code (the part that accesses shared mutable state). In pthreads, the primary tool for this is a mutex (mutual exclusion lock). 
 A mutex acts like a key to a room; only the thread holding the key can enter the room (the critical section). Other threads must wait outside until the key is returned.
+
+Here is the corrected example using `pthread_mutex_t`
 
 ```cpp
 #include <iostream>
